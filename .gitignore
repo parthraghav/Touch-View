@@ -1,5 +1,8 @@
 # Jupyter notebook checkpoints
 *-checkpoint.ipynb
 
-# Virtual Environment
+# Environment Files
 venv/
+__pycache__
+.vscode
+.ipynb_checkpoints/
