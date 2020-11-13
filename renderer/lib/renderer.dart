@@ -1,3 +1,3 @@
 library renderer;
 
-export 'MyHomePage.dart';
+export 'touch_view.dart';
