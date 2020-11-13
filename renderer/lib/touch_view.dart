@@ -11,6 +11,9 @@ class TouchView extends StatefulWidget {
 
 class _TouchViewState extends State<TouchView> {
   Offset _offset = Offset.zero;
+  double _scale = 1.0;
+  double _minScale = 1.0;
+  double _maxScale = 3.0;
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +22,16 @@ class _TouchViewState extends State<TouchView> {
       child: Center(
         child: Transform(
           transform: Matrix4.identity()
-            ..setEntry(3, 2, 0.001)
-            ..rotateX(0.01 * _offset.dy)
-            ..rotateY(-0.01 * _offset.dx),
+            ..translate(_offset.dx, _offset.dy)
+            ..scale(_scale)
+            ..rotateZ(0),
           alignment: AlignmentDirectional.center,
           child: GestureDetector(
             onPanUpdate: (details) => setState(() => _offset += details.delta),
-            onDoubleTap: () => setState(() => _offset = Offset.zero),
+            onDoubleTap: () => setState(() {
+              _offset = Offset.zero;
+              _scale = (_scale == 1.0) ? _maxScale : _minScale;
+            }),
             child: widget.imageProvider,
           ),
         ),
