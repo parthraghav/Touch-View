@@ -41,7 +41,11 @@ class Annotator(object):
         self.segmentData = self.exportToCSV(segmentMatrix)
         return {
             'segmentData': self.segmentData,
-            'labelData': self.labelData
+            'labelData': self.labelData,
+            'dimensions': {
+                'height': segmentMatrix.size()[0],
+                'width': segmentMatrix.size()[1],
+            }
         }
 
     def getCategoryLabelNames(self, segmentLabels):
