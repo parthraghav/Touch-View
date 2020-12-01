@@ -33,5 +33,10 @@ def getRawAnnotationData(path):
     return jsonify(annotation)
 
 
+@app.route("/get_raw_image/<path:path>")
+def getAccessibleImage(path):
+    return send_from_directory('../tests', path)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
