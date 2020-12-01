@@ -16,7 +16,6 @@ cycler==0.10.0
 Cython==0.29.21
 decorator==4.4.2
 defusedxml==0.6.0
-detectron2 @ git+https://github.com/facebookresearch/detectron2.git@06ff902d1d5eecb07297fe285151b99c42252e9b
 entrypoints==0.3
 Flask==1.1.2
 future==0.18.2
@@ -104,3 +103,4 @@ Werkzeug==1.0.1
 widgetsnbextension==3.5.1
 yacs==0.1.8
 zipp==3.3.0
+detectron2 @ git+https://github.com/facebookresearch/detectron2.git@06ff902d1d5eecb07297fe285151b99c42252e9b
