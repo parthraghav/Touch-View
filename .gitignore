@@ -6,3 +6,4 @@ venv/
 __pycache__
 .vscode
 .ipynb_checkpoints/
+.DS_Store
