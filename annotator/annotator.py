@@ -20,8 +20,6 @@ class Annotator(object):
 
     def annotate(self, imgPath):
         referenceImage = MetaDataManager.read(imgPath)
-        print("yaaaa")
-        print(referenceImage.get())
         isImageAnnotated = referenceImage.doesKeyExist(
             'segmentData') and referenceImage.doesKeyExist('labelData')
         if not isImageAnnotated:
@@ -61,7 +59,7 @@ class Annotator(object):
         return res
 
     def exportToCSV(self, mat: torch.tensor):
-        return ';'.join(','.join('%d' % x for x in y) for y in mat)
+        return ','.join(','.join('%d' % x for x in y) for y in mat)
 
     def isAnnotated(self):
         raise NotImplementedError()
