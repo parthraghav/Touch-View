@@ -10,6 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  exif: any
+  http: ^0.12.2
+  flutter_tts:
+  throttling: ^0.9.0
+  vibration:
 
 dev_dependencies:
   flutter_test:

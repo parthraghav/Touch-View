@@ -10,7 +10,7 @@ class DemoViewer extends StatefulWidget {
 
 class _DemoViewerState extends State<DemoViewer> {
   final testImagePath = "https://i.ibb.co/bQjgLSn/2.jpg";
-
+  bool _shouldReveal = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +18,16 @@ class _DemoViewerState extends State<DemoViewer> {
         title: Text("Demo"),
       ),
       backgroundColor: Colors.black54,
-      body: TouchView(imageProvider: Image.network(testImagePath)),
+      // backgroundColor: Colors.white,
+      body: TouchView(imageName: "1.jpg", reveal: _shouldReveal),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
+        backgroundColor: Colors.yellowAccent,
+        foregroundColor: Colors.black,
+        onPressed: () => setState(() {
+          _shouldReveal = !_shouldReveal;
+        }),
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: Icon(Icons.brightness_high),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
