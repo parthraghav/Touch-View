@@ -8,7 +8,7 @@ TouchView is a human computer interface that allows you to explore images by onl
 
 https://www.youtube.com/watch?v=_IW_YldafOo
 
-<img src="docs/screenshot.png" width="400">
+<img src="assets/screenshot.png" width="400">
 
 ## How it works
 
