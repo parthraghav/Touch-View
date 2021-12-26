@@ -1,5 +1,3 @@
-<img src="docs/FullText-Logo.png" width="400">
-
 ## Visual Accessibility tool to render images with Audio-haptic Feedback
 
 ![Production Status: Success](https://img.shields.io/badge/build-successful-brightgreen)
